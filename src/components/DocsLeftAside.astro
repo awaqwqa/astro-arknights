@@ -2,7 +2,10 @@
 import {getCollection} from "astro:content"
 
 const base = import.meta.env.BASE_URL
+
+// 这里可以改成获取页面传入的变量
 const allDocs = await getCollection("docs");
+
 ---
 
 <ul id="docs-nav-list" class="w-[18rem] p-8 text-[18px] grow overflow-y-auto">

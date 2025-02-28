@@ -16,6 +16,7 @@ const Logo = arknightsConfig?.navbar?.logo?.element
     </a>
     <nav class="portrait:hidden">
         <ul class="flex justify-evenly">{
+            // 这里进行一个获取config然后切换 将数据转化为NavbarItem类型,然后带着下标一起传输
             arknightsConfig.navbar.items.map((info: NavbarItem, index) =>
                     <NavItem client:only="react" {...{index, info}}/>)
         }</ul>

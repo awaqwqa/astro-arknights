@@ -87,10 +87,10 @@ export default function Index() {
             playsInline
         />
         {/* TODO: <canvas> */}
-        <div className={"w-[52.5rem] portrait:w-[18.75rem] h-[60.75rem] portrait:h-[12rem] absolute left-0 bottom-0 bg-mask-block portrait:bg-mask-block-m bg-[auto_110%] portrait:bg-[auto_100%] bg-[100%_0] transition-opacity duration-[.6s] ease-linear "
-            + (active ? "delay-[2s] opacity-[.78]" : "opacity-0")}/>
-        <div className={"w-[52.5rem] portrait:w-[5.75rem] h-[60.75rem] portrait:h-[12rem] absolute left-full bottom-0 bg-mask-block portrait:bg-mask-block-m bg-[auto_110%] portrait:bg-[auto_100%] bg-no-repeat translate-x-[-14.75rem] portrait:translate-x-[-3.75rem] transition-opacity duration-[.6s] ease-linear "
-            + (active ? "delay-[2.3s] opacity-25" : "opacity-0")}/>
+        {/* <div className={"w-[52.5rem] portrait:w-[18.75rem] h-[60.75rem] portrait:h-[12rem] absolute left-0 bottom-0 bg-mask-block portrait:bg-mask-block-m bg-[auto_110%] portrait:bg-[auto_100%] bg-[100%_0] transition-opacity duration-[.6s] ease-linear "
+            + (active ? "delay-[2s] opacity-[.78]" : "opacity-0")}/> */}
+        {/* <div className={"w-[52.5rem] portrait:w-[5.75rem] h-[60.75rem] portrait:h-[12rem] absolute left-full bottom-0 bg-mask-block portrait:bg-mask-block-m bg-[auto_110%] portrait:bg-[auto_100%] bg-no-repeat translate-x-[-14.75rem] portrait:translate-x-[-3.75rem] transition-opacity duration-[.6s] ease-linear "
+            + (active ? "delay-[2.3s] opacity-25" : "opacity-0")}/> */}
         <PortraitBottomGradientMask/>
         <div className={"absolute left-[4.5rem] portrait:left-[2rem] bottom-[2.75rem] portrait:bottom-[3rem]"
             + " transition-transform duration-1000"}/>

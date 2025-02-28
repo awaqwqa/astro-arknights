@@ -31,7 +31,7 @@ function Welcome() {
     const name = arknightsConfig?.navbar?.ownerInfo?.name
         ? <div className="pb-5">
             <img className="w-[12.5625rem] portrait:w-[21rem] h-auto ml-[1.5rem] portrait:ml-[5.5rem] block"
-                 src={import.meta.env.BASE_URL + "images/passport.png"}
+                 src={import.meta.env.BASE_URL + "images/avatar/elegy.jpg"}
                  alt="通行证"/>
             <div
                 className="text-[1rem] portrait:text-[1.75rem] mt-[-3.5rem] portrait:mt-[-5.75rem] ml-8 portrait:ml-[6.5rem]">

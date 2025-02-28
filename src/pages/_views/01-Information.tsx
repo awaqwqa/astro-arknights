@@ -29,7 +29,8 @@ function BreakingNewsTag({label, active, onClick}: {
 }
 
 function BreakingNewsItem({category, title, date, href}: BreakingNewsItemProps) {
-    return <a {...{href}} target="_blank"
+
+    return <a {...{href}} target="_blank" 
               className={"w-[22.5rem] portrait:w-[unset] h-24 portrait:h-[7.125rem] text-inherit"
                   + " border-b-[1px] border-solid border-[#ffffff4d] portrait:border-[#403c3b] no-underline"
                   + " flex items-center cursor-pointer"}>
@@ -135,7 +136,7 @@ function SwiperInfo({swiperIndex}: { swiperIndex: number }) {
             <a {...{href}} target="_blank"
                className={"w-[14.375rem] h-[3.75rem] pr-7 pl-4 mt-8 text-black no-underline whitespace-nowrap bg-ark-blue hover:bg-white flex items-center cursor-pointer transition-colors duration-300 portrait:hidden"}>
                 <div>
-                    <div className={"text-[1.25rem] font-black"}>更多情报</div>
+                    <div className={"text-[1.25rem] font-black"}>查看详细</div>
                     <div className={"text-[.875rem] font-benderBold"}>READ MORE</div>
                 </div>
                 <IconArrow className={"w-[.5rem] ml-auto flex-none pointer-events-none"}/>
@@ -143,7 +144,7 @@ function SwiperInfo({swiperIndex}: { swiperIndex: number }) {
         </div>
     </div>
 }
-
+// 实现图片滑动
 function ImageSlide({image, title}: { image: string, title: string }) {
     return <div className="w-full h-full relative">
         <div className="w-full h-full overflow-hidden absolute">

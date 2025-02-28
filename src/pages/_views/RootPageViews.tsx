@@ -8,7 +8,6 @@ import Operator from "./02-Operator.tsx";
 import World from "./03-World.tsx";
 import Media from "./04-Media.tsx";
 import More from "./05-More.tsx";
-
 export default function RootPageViews() {
     const [isLoading, setIsLoading] = useState(true);
 
@@ -18,7 +17,7 @@ export default function RootPageViews() {
             HASH === item.href.split("#")[1])
         return INDEX === -1 ? 0 : INDEX;
     });
-
+    // url发生变化的时候
     useLayoutEffect(() => {
         viewIndex.set(localViewIndex);
         setIsLoading(false);
@@ -39,6 +38,7 @@ export default function RootPageViews() {
 
     useLayoutEffect(() => {
         const HASH = location.hash.split("#")[1];
+        // 获取url变化后对应的index，然后切换
         const INDEX = arknightsConfig.navbar.items.findIndex(item =>
             HASH === item.href.split("#")[1])
         viewIndex.set(INDEX === -1 ? 0 : INDEX)
@@ -94,8 +94,8 @@ export default function RootPageViews() {
     if (isLoading) {
         return null; // 或者返回一个加载指示器
     }
-
-    return [Index, Information, Operator, World, Media, More].map((Element, index) =>
+    // 这里注册Index
+    return [Index, Information, Operator, World, Media, More, More].map((Element, index) =>
         <RootPageViewTemplate key={index} selfIndex={index}><Element /></RootPageViewTemplate>
     )
 }

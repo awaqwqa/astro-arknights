@@ -15,8 +15,8 @@ export default function LineDecorator() {
         base + (left ? "left-[14.75rem] portrait:left-[5.75rem] " : "-left-px ") + "w-px h-full top-0", [left])
     return <div id="line-decorator"
                 className="w-full h-full absolute top-0 left-0 z-[3] pointer-events-none overflow-hidden">
-        <div className={topClassName}/>
-        <div className={rightClassName}/>
+        {/* <div className={topClassName}/> */}
+        {/* <div className={rightClassName}/> */}
         <div className={bottomClassName}/>
         <div className={leftClassName}/>
     </div>

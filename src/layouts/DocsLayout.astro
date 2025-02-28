@@ -21,7 +21,9 @@ const subNavigationItems = getDocsSubNavigationItems()
 <InfoLayout title="DOCS" subTitle="文档" {...{tabTitle, subNavigationItems}}>
     <nav slot="left-aside"
          class="h-full mix-blend-difference bg-list-texture bg-cover bg-center bg-opacity-30 flex flex-col">
+         <!-- 左侧文件导航 -->
         <DocsLeftAside/>
+        <!-- 左侧文件导航收起 -->
         <DocsLeftAsideSwitch client:load/>
     </nav>
 

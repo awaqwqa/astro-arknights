@@ -48,7 +48,7 @@ export default function ToolBox() {
             <div className="portrait:w-[25.75rem] relative pt-[2.625rem] portrait:pt-0 pb-[3rem] portrait:m-auto">
                 <div className={"mx-12 portrait:mr-0 portrait:ml-0 whitespace-nowrap font-benderBold"
                     + " text-[.75rem] portrait:text-[1.125rem] flex items-center"}>
-                    TOOLBOX
+                    友情链接
                     <span className="ml-[1em] flex-auto h-px bg-white"></span>
                 </div>
                 <div
