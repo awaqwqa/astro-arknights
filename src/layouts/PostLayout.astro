@@ -2,13 +2,16 @@
 import type {MarkdownHeading} from "astro"
 import type {SubNavigationItem} from "../_types/SubNavigationItem"
 import InfoLayout from "./InfoLayout.astro"
+// 这里改成PostLeftAside
 import DocsLeftAside from "../components/DocsLeftAside.astro"
-import PostLeftAside from "../components/post/PostLeftAside.astro"
+// 改成PostLeftAsideSwitch
 import DocsLeftAsideSwitch from "../components/DocsLeftAsideSwitch"
+// 改为PostIndexUL
 import DocumentIndexUL from "../components/DocumentIndexUL.astro"
+// 改成PostToolPanel
 import DocsToolPanel from "../components/DocsToolPanel"
 import { getDocsSubNavigationItems } from "../components/DocsCollectionsUtils"
-import TDesignTree from "../components/common/ReactTree"
+
 interface Props {
     title?: string
     headings?: MarkdownHeading[]
@@ -19,12 +22,11 @@ const tabTitle = title ? title + " - 文档" : "文档"
 const subNavigationItems = getDocsSubNavigationItems()
 ---
 
-<InfoLayout title="DOCS" subTitle="文档" {...{tabTitle, subNavigationItems}}>
+<InfoLayout title="Post" subTitle="文章" {...{tabTitle, subNavigationItems}}>
     <nav slot="left-aside"
          class="h-full mix-blend-difference bg-list-texture bg-cover bg-center bg-opacity-30 flex flex-col">
          <!-- 左侧文件导航 -->
-        <!-- <PostLeftAside/> -->
-        <TDesignTree />
+        <DocsLeftAside/>
         <!-- 左侧文件导航收起 -->
         <DocsLeftAsideSwitch client:load/>
     </nav>
@@ -32,8 +34,7 @@ const subNavigationItems = getDocsSubNavigationItems()
     <div id="docs-content"
          class="max-w-[80.75rem] h-full mx-auto overflow-y-auto transition-[height] duration-300">
         {/* TODO: 面包屑导航 */}
-        <!-- 感觉是代码重复 不确定 -->
-        <!-- {
+        {
             headings && headings.length > 0 &&
                 <details class="pb-8 landscape:hidden">
                     <summary class="text-black bg-white text-[24px] font-bold px-3 font-oswaldMedium">
@@ -41,16 +42,15 @@ const subNavigationItems = getDocsSubNavigationItems()
                     </summary>
                     <DocumentIndexUL {...{headings}}/>
                 </details>
-        } -->
+        }
         <slot/>
     </div>
 
     {
         headings && headings.length > 0 &&
-        // aside-header也就是右侧的头位置
             <nav slot="aside-header">
-                <h2 class="text-black bg-[#8c8a8a] text-[1.75rem] font-bold px-3 font-oswaldMedium">
-                    导航
+                <h2 class="text-black bg-white text-[1.75rem] font-bold px-3 font-oswaldMedium">
+                    Document Index - 文档索引
                 </h2>
                 <DocumentIndexUL {...{headings}}/>
             </nav>
